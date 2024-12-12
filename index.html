@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin:  15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        
+        section {
+            position: relative;
+            text-align: center;
+            color: white; 
+        }
+
+        .background-image {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; 
+        }
+
+        .content {
+            position: relative; 
+            z-index: 1; 
+            padding: 20px; 
+        }
+
+       
+        #contactInfo {
+            display: none; 
+            background-color: rgba(0, 0, 0, 0.8); 
+            color: #000000;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 5px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipe.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <input type="text" id="searchBar" placeholder="Search recipes..." oninput="searchRecipes()">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <img src="food backgound.jpg" alt="Food Background" class="background-image">
+        <div class="content">
+           
+            <h1><b>Welcome to My Recipe Book</b></h1>
+            <p>Explore delicious recipes and learn more about me.</p>
+        </div>
+       <!-- Button to open video modal -->
+<button onclick="openVideo('https: //www.youtube.com/embed/Gk5SfFo0QF8')">Explore our recipe book</button>
+
+<!-- Modal for video -->
+<div id="videoModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeVideo()">&times;</span>
+        <iframe id="recipeVideo" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
+        <div id="contactInfo">
+            <h2>Contact the Founder</h2>
+            <p>Email: founder@example.com</p>9lQs7IzbifzFRD0F
+            <p>Phone: +1 234 567 8901</p>
+        </div>
+    </section>
+
+    <script>
+        function searchRecipes() {
+            const query = document.getElementById('searchBar').value.toLowerCase();
+            const recipes = document.querySelectorAll('.recipe');
+            const contactInfo = document.getElementById('contactInfo');
+
+            let found = false;
+
+            recipes.forEach(recipe => {
+                const recipeName = recipe.getAttribute('data-name').toLowerCase();
+                if (recipeName.includes(query)) {
+                    recipe.style.display = 'block';
+                    found = true; 
+                } else {
+                    recipe.style.display = 'none';
+                }
+            });
+
+            
+            if (query === "contact") {
+                contactInfo.style.display = 'block'; 
+            } else {
+                contactInfo.style.display = found ? 'none' : 'none'; 
+            }
+        }
+
+        function openVideo(videoSrc) {
+            document.getElementById('recipeVideo').src = videoSrc;
+            document.getElementById('videoModal').style.display = 'block';
+        }
+
+
+        function closeVideo() {
+            const video = document.getElementById('recipeVideo');
+            video.pause();
+            video.currentTime = 0;
+            document.getElementById('videoModal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

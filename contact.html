@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipe.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <li>
+                <input type="text" id="searchBar" placeholder="Search recipes..." oninput="searchRecipes()">
+            </li>
+        </nav>
+    </header>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h3>Message for joining our team</h3>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Your name" required><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Your email" required><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea><br><br>
+            
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+
+
+    <script>
+        function openVideo(videoSrc) {
+            document.getElementById('recipeVideo').src = videoSrc;
+            document.getElementById('videoModal').style.display = 'block';
+        }
+
+        function closeVideo() {
+            const video = document.getElementById('recipeVideo');
+            video.pause();
+            video.currentTime = 0;
+            document.getElementById('videoModal').style.display = 'none';
+        }
+
+        function searchRecipes() {
+            const input = document.getElementById('searchBar').value.toLowerCase();
+            const recipes = document.querySelectorAll('.recipe');
+
+            recipes.forEach(recipe => {
+                const recipeName = recipe.getAttribute('data-name').toLowerCase();
+                if (recipeName.includes(input)) {
+                    recipe.style.display = 'block';
+                } else {
+                    recipe.style.display = 'none'; 
+                }
+            });
+        }
+    </script>
+</body>
+</html>

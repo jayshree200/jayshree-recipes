@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <li>
+                <input type="text" id="searchBar" placeholder="Search recipes..." oninput="searchRecipes()">
+            </li>
+        </nav>
+    </header>
+    <!------------ Our Recipe  ------------->
+    <section id="recipes" class="recipes">
+        <h1>Our Recipes</h1>
+    <section>
+        <h1> My Recipes</h1>
+        
+        <div id="recipe-list">
+            <!-- Recipe entries as before -->
+            <div class="recipe" data-name="Pasta">
+                <h3>Pasta</h3>
+                <p>For white sauce pasta, cook pasta, make a creamy white sauce, mix them together, and enjoy!
+                </p>
+                <img src="pasta.jpg" alt="Pasta" onclick="openVideo('pasta-video.mp4')" style="cursor: pointer;">
+                <a href="https://youtu.be/l_HOohJZL0U?si=hB-uFqt18UsCg43h" target="_blank" class="video-link">Watch Video Recipe</a>
+            </div>
+            <!-- More recipes here -->
+            <div class="recipe" data-name="Chocolate Cake">
+                <h3>Chocolate Cake</h3>
+                <p>For chocolate cake, mix the batter, bake until fluffy, and top with rich chocolate frosting!</p>
+                <img src="Chocolate Cake.jpeg" alt="Chocolate Cake" onclick="openVideo('cake-video.mp4')" style="cursor: pointer;">
+                <a href="https://youtu.be/zAwFaqdf8yY?si=ANXTdXy0nvyVJT2s" target="_blank" class="video-link">Watch Video Recipe</a>
+            </div>
+            <!-- Add more recipes as needed -->
+                 
+                <!-- Recipe 3 -->
+                <div class="recipe" data-name="Masala Dosa">
+                    <h3>Masala Dosa</h3>
+                    <p>
+                        For masala dosa, prepare the dosa batter, make a spicy potato filling, cook the dosa, and serve with the filling inside</p>
+                    <img src="masala dosa.jpeg" alt="Masala Dosa" onclick="openVideo('curry-video.mp4')" style="cursor: pointer;">
+                    <a href="https://youtu.be/J75VQSxOtdo?si=0lc_v3l6hO6EcxRE" target="_blank" class="video-link">Watch Video Recipe</a>
+                </div>
+    
+                <!-- Recipe 4 -->
+                <div class="recipe" data-name="Rava">
+                    <h3>Rava</h3>
+                    <p>For rava (semolina), roast it, add water and spices, cook until fluffy, and enjoy it as upma or a sweet dish!</p>
+                    <img src="rava.jpeg" alt="Rava" onclick="openVideo('rava-video.mp4')" style="cursor: pointer;">
+                    <a href="https://youtu.be/oAsrviK2qWU?si=hDJvAUBX95PPYR5L" target="_blank" class="video-link">Watch Video Recipe</a>
+                </div>
+    
+                <!-- Recipe 5 -->
+                <div class="recipe" data-name="Rice">
+                    <h3>Rice</h3>
+                    <p>For vegetable rice, sauté mixed vegetables, add rice and spices, cook until the rice is fluffy, and serve hot!</p>
+                    <img src="rice.jpg" alt="Rice" onclick="openVideo('rice-video.mp4')" style="cursor: pointer;">
+                    <a href="https://youtu.be/bXgxzzNm0U8?si=gKIOBUW_WoV-7L6P" target="_blank" class="video-link">Watch Video Recipe</a>
+                </div>
+    
+                <!-- Additional Recipes -->
+                <!-- Recipe 6 -->
+                <div class="recipe" data-name="Litti Chokha">
+                    <h3>Litti Chokha</h3>
+                    <p>For litti chokha, bake stuffed wheat balls (litti) and serve with mashed spiced vegetables (chokha) for a delicious, traditional meal!
+                    </p>
+                    <img src="litti chokha.jpg" alt="Litti Chokha" onclick="openVideo('rice-video.mp4')" style="cursor: pointer;">
+                    <a href="https://youtu.be/bnUAxii96nE?si=H9d8Z2xBcgD1qWZp" target="_blank" class="video-link">Watch Video Recipe</a>
+                </div>
+    
+                <!-- Recipe 7 -->
+                <div class="recipe" data-name="Khaja">
+                    <h3>Khaja</h3>
+                    <p>For khaja, prepare layered dough, fry it until golden and crispy, then dip in sugar syrup for a sweet, flaky treat!
+                    </p>
+                    <img src="khaja.jpeg" alt="Khaja" onclick="openVideo('rice-video.mp4')" style="cursor: pointer;">
+                    <a href="https://youtu.be/bo_x5vxuGuE?si=CVXm_tttC010QVje" target="_blank" class="video-link">Watch Video Recipe</a>
+                </div>
+    
+                <!-- Recipe 8 -->
+                <div class="recipe" data-name="Ghever">
+                    <h3>Ghever</h3>
+                    <p>For ghevar, make a batter, deep fry it into a honeycomb-like disc, and soak it in sugar syrup, topping with rabri or dry fruits!
+                    </p>
+                    <img src="ghevar.jpeg" alt="Ghever" onclick="openVideo('rice-video.mp4')" style="cursor: pointer;">
+                    <a href="https://youtu.be/xi0ekbX08rg?si=WsRV03J5-B10XvJL" target="_blank" class="video-link">Watch Video Recipe</a>
+                </div>
+    
+                <!-- Recipe 9 -->
+                <div class="recipe" data-name="Fruit Shake">
+                    <h3>Fruit Shake</h3>
+                    <p>A refreshing drink made with fresh fruits and milk.</p>
+                    <img src="fruit shake.webp" alt="Fruit Shake" onclick="openVideo('rice-video.mp4')" style="cursor: pointer;">
+                    <a href="https://youtu.be/uT-cp7CJIW0?si=zoQt1HFuIPY2bqHg" target="_blank" class="video-link">Watch Video Recipe</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Video Modal -->
+        <div id="videoModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeVideo()">&times;</span>
+                <video id="recipeVideo" width="100%" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function openVideo(videoSrc) {
+            document.getElementById('recipeVideo').src = videoSrc;
+            document.getElementById('videoModal').style.display = 'block';
+        }
+
+        function closeVideo() {
+            const video = document.getElementById('recipeVideo');
+            video.pause();
+            video.currentTime = 0;
+            document.getElementById('videoModal').style.display = 'none';
+        }
+
+        function searchRecipes() {
+            const input = document.getElementById('searchBar').value.toLowerCase();
+            const recipes = document.querySelectorAll('.recipe');
+
+            recipes.forEach(recipe => {
+                const recipeName = recipe.getAttribute('data-name').toLowerCase();
+                if (recipeName.includes(input)) {
+                    recipe.style.display = 'block'; // Show recipe
+                } else {
+                    recipe.style.display = 'none'; // Hide recipe
+                }
+            });
+        }
+    </script>
+</body>
+</html>

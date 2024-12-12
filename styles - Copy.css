@@ -1,0 +1,259 @@
+
+@media (max-width: 768px) {
+    nav ul {
+        display: white;
+    }
+    .contact-info {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #e3d5d5;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #e80d0d;
+    text-decoration: none;
+}
+
+section {
+    text-align: center;
+    color: #333;
+    padding: 20px;
+}
+
+/* Recipe box styling */
+#recipe-list {
+    background-color: rgb(255, 246, 246);
+    
+    display: flex; /* Flexbox to align items in a row */
+    flex-wrap: wrap; /* Allow wrapping to new lines */
+    justify-content: center; /* Center align items */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+
+.recipe {
+    background-color: rgb(0, 0, 0);
+    background-color: hsl(0, 52%, 62%); /
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    margin: 10px; 
+    padding: 15px; 
+    width: 250px; 
+    box-shadow: 0 2px 5px rgba(219, 212, 212, 0.1); 
+    text-align: left; 
+    
+}
+
+.recipe img {
+    max-width: 100%; 
+    height: auto; 
+    border-style: solid; 
+}
+
+.video-link {
+    display: inline-block; 
+    margin-top: 10px; 
+    text-decoration: none; 
+    color: #007bff; 
+}
+
+.video-link:hover {
+    text-decoration: underline; 
+}
+
+
+.modal {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(236, 226, 226, 0.8); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.modal-content {
+    background-color: #e38080; 
+    padding: 20px; 
+    border-radius: 5px; 
+    position: relative; 
+}
+
+.close {
+    position: absolute; 
+    top: 10px;
+    right: 10px;
+    cursor: pointer; 
+    font-size: 20px; 
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a, nav ul li input {
+    color: #f9f7f7;
+    text-decoration: none;
+}
+
+section#contact {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-info {
+    display: inline-block;
+    margin: 20px;
+    text-align: left;
+}
+
+.contact-info img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+}
+/* For the contact section only */
+#contact {
+    background-color: rgb(223, 236, 197); /* Change to any color you prefer */
+    padding: 20px;
+    color: black; /* Change text color if needed */
+}
+
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    color: white;
+    text-align: center;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the section */
+    z-index: -1; /* Puts the image behind the text */
+}
+
+.content {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -70%); /* Centers the text */
+    z-index: 1;
+    padding: 20px;
+   
+}
+/* Contact Form Styling */
+.contact-form {
+    background-color: #c7e2ba; /* Light background for the form */
+    padding: 20px; /* Padding inside the form */
+    border: 1px solid #ccc; /* Light border around the form */
+    border-radius: 8px; /* Rounded corners */
+    width: 60%; /* Adjust width */
+    margin: 20px auto; /* Center the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.contact-form h3 {
+    color: #333; /* Darker heading color */
+    margin-bottom: 15px; /* Space below heading */
+    font-size: 24px; /* Larger font for heading */
+}
+
+.contact-form label {
+    display: block; /* Make the label take full width */
+    margin-bottom: 8px; /* Space below label */
+    color: #666; /* Grey color for label text */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%; /* Full width of the form */
+    padding: 10px; /* Padding inside the input fields */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below each input */
+    font-size: 16px; /* Adjust font size */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    height: 150px; /* Initial height */
+}
+
+.contact-form input[type="submit"] {
+    background-color: #e80d0d; /* Red background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #cc0c0c; /* Darker red on hover */
+}
+
+
+
